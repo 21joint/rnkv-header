@@ -21,8 +21,8 @@
           <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/partials/header/header.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="172">
-                  <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
+                <state relative-caret-position="187">
+                  <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
                   <folding>
                     <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
                     <element signature="n#div#1;n#div#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
@@ -118,13 +118,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>navba</find>
-      <find>.navbar-collapse</find>
       <find>$grid-float-breakpoint</find>
       <find>collapsing</find>
       <find>navbar</find>
       <find>collaps</find>
       <find>.navbar-collapse.collapse</find>
       <find>social</find>
+      <find>.navbar-collapse</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -254,16 +254,15 @@
       <option name="presentableId" value="Default" />
       <updated>1532958978416</updated>
       <workItem from="1532958981005" duration="5691000" />
-      <workItem from="1532986710849" duration="15440000" />
+      <workItem from="1532986710849" duration="16242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21131000" />
+    <option name="totallyTimeSpent" value="21933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="793" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1952079" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -530,24 +529,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/header/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
-          <folding>
-            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
-            <element signature="n#li#1;n#ul#0;n#div#0;n#div#0;n#nav#1;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/header/header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="74" column="38" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding>
             <element signature="e#274#360#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/header/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="n#button#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
+            <element signature="n#li#1;n#ul#0;n#div#0;n#div#0;n#nav#1;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" />
           </folding>
         </state>
       </provider>
