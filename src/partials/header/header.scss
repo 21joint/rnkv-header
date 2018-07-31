@@ -129,10 +129,7 @@
 }
 
 .navbar-toggler {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  right: 0;
   display: block;
   width: 60px;
   height: 60px;
@@ -172,7 +169,6 @@
 }
 
 .#{$prefix}-header--right {
-  margin-top: 23px;
   li {
     background-color: #02496a;
     border-bottom: 1px solid #336e89;

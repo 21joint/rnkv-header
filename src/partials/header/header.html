@@ -2,93 +2,117 @@
     <div class="container-fluid">
         <div class="flex-row align-items-center justify-content-between">
 
-            <div class="flex-col-auto">
-                <a class="${ require('../../../conf').prefix }-logo" href="${ require('../../../conf').BASE_URL }">
-                    <img
-                            class="img-responsive"
-                            src="../../assets/images/logo.svg"
-                            alt="${ require('../../../conf').name }">
-                </a>
-            </div>
-            <div class="flex-col-md-auto position-static ml-auto">
-
-                <button type="button"
-                        class="navbar-toggler navbar_toggler visible-xs visible-sm"
-                        data-toggle="collapse"
-                        data-target="#navBar"
-                        aria-expanded="false">
-                    <span class="icon-hamburger"></span>
-                </button>
-                <div class="${ require('../../../conf').prefix }-header--right collapse navbar-collapse" id="navBar">
-                    <nav class="${ require('../../../conf').prefix }-header--rightTop">
-                        <div class="flex-row align-items-center">
-                            <div class="flex-col-md-auto">
-                                <ul class="${ require('../../../conf').prefix }-main--navTop m-0 p-0">
-                                    <li><a href="${ require('../../../conf').BASE_URL }/meetings/" target="_blank">Meetings</a></li>
-                                    <li><a href="${ require('../../../conf').BASE_URL }/sports/" target="_blank">Sports</a></li>
-                                    <li><a href="${ require('../../../conf').BASE_URL }/group-tours/" target="_blank">Groups</a></li>
-                                    <li><a href="${ require('../../../conf').BASE_URL }/weddings/" target="_blank">Weddings</a></li>
-                                    <li><a href="${ require('../../../conf').BASE_URL }/media/" target="_blank">Media</a></li>
-                                    <li><a href="${ require('../../../conf').BASE_URL }/blog/" target="_blank">Blog</a></li>
-                                </ul>
-                            </div>
-                            <div class="flex-col hidden-xs hidden-sm pl-0">
-                                <ul class="${ require('../../../conf').prefix }-header--social m-0 p-0">
-                                    <li><a href="https://www.facebook.com/visitvbr" target="_blank"><i class="icon-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=visitvbr" target="_blank"><i class="icon-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/roanoke-valley-convention-and-visitors-bureau" target="_blank"><i class="icon-linkedin"></i></a></li>
-                                    <li><a href="https://www.pinterest.com/vablueridge/" target="_blank"><i class="icon-pinterest"></i></a></li>
-                                    <li><a href="https://www.instagram.com/visitvbr/" target="_blank"><i class="icon-instagram"></i></a></li>
-                                    <li><a href="https://www.youtube.com/channel/UCFU_Du1m5pDhAsu65POaKbw" target="_blank"><i class="icon-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </nav>
-                    <nav class="${ require('../../../conf').prefix }-header--rightBot">
-                        <div class="flex-row">
-                            <div class="flex-col-md-auto">
-                                <ul class="${ require('../../../conf').prefix }-main--navBot m-0 p-0">
-                                    <li>
-                                        <a class="main-links"
-                                           href="${ require('../../../conf').BASE_URL }/things-to-do/"
-                                           target="_blank"
-                                           title="Explore">Things To Do</a>
-                                    </li>
-                                    <li>
-                                        <a class="main-links"
-                                           href="${ require('../../../conf').BASE_URL }/hotels-lodging/"
-                                           target="_blank"
-                                           title="Play">Hotels/lodging</a>
-                                    </li>
-                                    <li>
-                                        <a class="main-links"
-                                           href="${ require('../../../conf').BASE_URL }/restaurants/"
-                                           target="_blank"
-                                           title="Eat">Restaurants</a>
-                                    </li>
-                                    <li>
-                                        <a class="main-links"
-                                           href="${ require('../../../conf').BASE_URL }/region/"
-                                           target="_blank"
-                                           title="Stay">Region</a>
-                                    </li>
-                                    <li>
-                                        <a id="last-item-main-links"
-                                           class="main-links"
-                                           href="${ require('../../../conf').BASE_URL }/plan/"
-                                           target="_blank"
-                                           title="Deals">plan</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </nav>
-
-
+            <div class="flex-col-12 flex-col-md-auto">
+                <div class="flex-row align-items-center">
+                    <div class="flex-col-auto">
+                        <a class="${ require('../../../conf').prefix }-logo"
+                                                  href="${ require('../../../conf').BASE_URL }">
+                        <img
+                                class="img-responsive"
+                                src="../../assets/images/logo.svg"
+                                alt="${ require('../../../conf').name }">
+                    </a>
+                    </div>
+                    <div class="flex-col-auto ml-auto px-0">
+                        <button type="button"
+                                class="navbar-toggler navbar_toggler visible-xs visible-sm"
+                                data-toggle="collapse"
+                                data-target="#navBar"
+                                aria-expanded="false">
+                            <span class="icon-hamburger"></span>
+                        </button>
+                    </div>
                 </div>
 
+            </div>
+            <div class="flex-col-12 flex-col-md-auto position-static">
+                <div class="flex-row">
+                    <div class="flex-col-md-auto position-static ml-auto">
+                        <div class="${ require('../../../conf').prefix }-header--right collapse navbar-collapse" id="navBar">
+                            <nav class="${ require('../../../conf').prefix }-header--rightTop">
+                                <div class="flex-row align-items-center">
+                                    <div class="flex-col-md-auto">
+                                        <ul class="${ require('../../../conf').prefix }-main--navTop m-0 p-0">
+                                            <li><a href="${ require('../../../conf').BASE_URL }/meetings/" target="_blank">Meetings</a>
+                                            </li>
+                                            <li><a href="${ require('../../../conf').BASE_URL }/sports/"
+                                                   target="_blank">Sports</a></li>
+                                            <li><a href="${ require('../../../conf').BASE_URL }/group-tours/" target="_blank">Groups</a>
+                                            </li>
+                                            <li><a href="${ require('../../../conf').BASE_URL }/weddings/" target="_blank">Weddings</a>
+                                            </li>
+                                            <li><a href="${ require('../../../conf').BASE_URL }/media/"
+                                                   target="_blank">Media</a></li>
+                                            <li><a href="${ require('../../../conf').BASE_URL }/blog/" target="_blank">Blog</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-col hidden-xs hidden-sm pl-0">
+                                        <ul class="${ require('../../../conf').prefix }-header--social m-0 p-0">
+                                            <li><a href="https://www.facebook.com/visitvbr" target="_blank"><i
+                                                    class="icon-facebook"></i></a></li>
+                                            <li>
+                                                <a href="https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=visitvbr"
+                                                   target="_blank"><i class="icon-twitter"></i></a></li>
+                                            <li>
+                                                <a href="https://www.linkedin.com/company/roanoke-valley-convention-and-visitors-bureau"
+                                                   target="_blank"><i class="icon-linkedin"></i></a></li>
+                                            <li><a href="https://www.pinterest.com/vablueridge/" target="_blank"><i
+                                                    class="icon-pinterest"></i></a></li>
+                                            <li><a href="https://www.instagram.com/visitvbr/" target="_blank"><i
+                                                    class="icon-instagram"></i></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UCFU_Du1m5pDhAsu65POaKbw"
+                                                   target="_blank"><i class="icon-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </nav>
+                            <nav class="${ require('../../../conf').prefix }-header--rightBot">
+                                <div class="flex-row">
+                                    <div class="flex-col-md-auto">
+                                        <ul class="${ require('../../../conf').prefix }-main--navBot m-0 p-0">
+                                            <li>
+                                                <a class="main-links"
+                                                   href="${ require('../../../conf').BASE_URL }/things-to-do/"
+                                                   target="_blank"
+                                                   title="Explore">Things To Do</a>
+                                            </li>
+                                            <li>
+                                                <a class="main-links"
+                                                   href="${ require('../../../conf').BASE_URL }/hotels-lodging/"
+                                                   target="_blank"
+                                                   title="Play">Hotels/lodging</a>
+                                            </li>
+                                            <li>
+                                                <a class="main-links"
+                                                   href="${ require('../../../conf').BASE_URL }/restaurants/"
+                                                   target="_blank"
+                                                   title="Eat">Restaurants</a>
+                                            </li>
+                                            <li>
+                                                <a class="main-links"
+                                                   href="${ require('../../../conf').BASE_URL }/region/"
+                                                   target="_blank"
+                                                   title="Stay">Region</a>
+                                            </li>
+                                            <li>
+                                                <a id="last-item-main-links"
+                                                   class="main-links"
+                                                   href="${ require('../../../conf').BASE_URL }/plan/"
+                                                   target="_blank"
+                                                   title="Deals">plan</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </nav>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
