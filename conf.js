@@ -1,7 +1,7 @@
 const Pkg = require('./package');
 
 module.exports = {
-  BASE_URL: 'https://www.seattlesouthside.com',
+  BASE_URL: 'https://www.visitroanokeva.com',
   title: Pkg.name,
   description: Pkg.description,
   prefix: 'rnkv',
