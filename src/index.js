@@ -6,6 +6,7 @@
 
 // }
 import $ from 'jquery';
+import './partials/header/header';
 import './externals';
 import './assets/styles/index.scss';
 

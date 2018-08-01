@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icomoon-font-path}/icomoon.eot?t90lbk');
-  src:  url('#{$icomoon-font-path}/icomoon.eot?t90lbk#iefix') format('embedded-opentype'),
+  src: url('#{$icomoon-font-path}/icomoon.eot?t90lbk');
+  src: url('#{$icomoon-font-path}/icomoon.eot?t90lbk#iefix') format('embedded-opentype'),
   url('#{$icomoon-font-path}/icomoon.ttf?t90lbk') format('truetype'),
   url('#{$icomoon-font-path}/icomoon.woff?t90lbk') format('woff'),
   url('#{$icomoon-font-path}/icomoon.svg?t90lbk#icomoon') format('svg');
@@ -30,32 +30,37 @@
   @return unquote("\"") + $str + unquote("\"");
 }
 
-.icon-linkedin{
+.icon-linkedin {
   &:before {
     content: unicode($icon-linkedin);
   }
 }
-.icon-youtube{
+
+.icon-youtube {
   &:before {
     content: unicode($icon-youtube);
   }
 }
-.icon-instagram{
+
+.icon-instagram {
   &:before {
     content: unicode($icon-instagram);
   }
 }
-.icon-pinterest{
+
+.icon-pinterest {
   &:before {
     content: unicode($icon-pinterest);
   }
 }
-.icon-twitter{
+
+.icon-twitter {
   &:before {
     content: unicode($icon-twitter);
   }
 }
-.icon-facebook{
+
+.icon-facebook {
   &:before {
     content: unicode($icon-facebook);
   }

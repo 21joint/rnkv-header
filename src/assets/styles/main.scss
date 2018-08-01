@@ -1,11 +1,11 @@
 body {
-  font-family: "TradeGothicLT-BoldCondTwenty",sans-serif;
+  font-family: "TradeGothicLT-BoldCondTwenty", sans-serif;
   color: #5a5a5a;
 }
+
 .position-static {
   position: static !important;
 }
-
 
 .text-sm-left {
   @media (min-width: $screen-sm) {

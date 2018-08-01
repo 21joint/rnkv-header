@@ -1,45 +1,20 @@
-//Trade Gothic LT Bold Condensed
+@font-face {
+  font-family: 'Trade Gothic LT Std';
+  src: url("https://fast.fonts.net/dv2/14/5414f75e-5cb8-4357-88e5-5a294424c859.woff2?d44f19a684109620e484157ea190e818a1262f6e443e6f7727eff29296a213834bd53f71c48d745b4ddb04ac6cf15fdbade51b8b1edc140db7520f4e709d06d72f9c156bbfa2f797d9d3e86bab8569cafc2460ca078bde42b233024e4964801313b9273a1cc2596a769b165db273a2e199661b84e69f62b4977a9110cb35d447fed9ac7d8d5bde3610471f4326860d698f8942047b3dbcb1d4aac107b32abaed89a99cac0bc51667045f2c1ca2f2f9d5&projectId=096d7ce8-105d-48dd-80cc-d903a7c2bb9b") format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'Trade Gothic LT Bold Condensed No. 20';
-  src: url('../fonts/Trade Gothic Bold Condensed/Trade Gothic LT Bold Condensed No. 20.eot');
-  src: url('../fonts/Trade Gothic Bold Condensed/Trade Gothic LT Bold Condensed No. 20.woff2') format('woff2'),
-  url('../fonts/Trade Gothic Bold Condensed/Trade Gothic LT Bold Condensed No. 20.eot?#iefix') format('embedded-opentype');
+  font-family: 'Trade Gothic LT Std';
+  src: url("https://fast.fonts.net/dv2/14/d2e623ca-efc6-4557-ae55-ebb786065dcf.woff2?d44f19a684109620e484157ea190e818a1262f6e443e6f7727eff29296a213834bd53f71c48d745b4ddb04ac6cf15fdbade51b8b1edc140db7520f4e709d06d72f9c156bbfa2f797d9d3e86bab8569cafc2460ca078bde42b233024e4964801313b9273a1cc2596a769b165db273a2e199661b84e69f62b4977a9110cb35d447fed9ac7d8d5bde3610471f4326860d698f8942047b3dbcb1d4aac107b32abaed89a99cac0bc51667045f2c1ca2f2f9d5&projectId=096d7ce8-105d-48dd-80cc-d903a7c2bb9b") format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TradeGothicLT-BoldCondTwenty';
-  src: url('../fonts/Trade Gothic Bold Condensed/TradeGothicLT-BoldCondTwenty.woff') format('woff'),
-  url('../fonts/Trade Gothic Bold Condensed/TradeGothicLT-BoldCondTwenty.ttf') format('truetype'),
-  url('../fonts/Trade Gothic Bold Condensed/TradeGothicLT-BoldCondTwenty.svg#TradeGothicLT-BoldCondTwenty') format('svg');
+  font-family: 'Trade Gothic LT Std';
+  src: url("https://fast.fonts.net/dv2/14/1ba28851-f34b-4cb8-bf58-6a4b160ba249.woff2?d44f19a684109620e484157ea190e818a1262f6e443e6f7727eff29296a213834bd53f71c48d745b4ddb04ac6cf15fdbade51b8b1edc140db7520f4e709d06d72f9c156bbfa2f797d9d3e86bab8569cafc2460ca078bde42b233024e4964801313b9273a1cc2596a769b165db273a2e199661b84e69f62b4977a9110cb35d447fed9ac7d8d5bde3610471f4326860d698f8942047b3dbcb1d4aac107b32abaed89a99cac0bc51667045f2c1ca2f2f9d5&projectId=096d7ce8-105d-48dd-80cc-d903a7c2bb9b") format('woff2');
   font-weight: 700;
-  font-style: normal;
+  font-stretch: condensed;
 }
-
-
-//Trade Gothic
-
-@font-face {
-  font-family: 'Trade Gothic LT';
-  src: url('../fonts/Trade Gothic/Trade Gothic LT.eot');
-  src: url('../fonts/Trade Gothic/Trade Gothic LT.woff2') format('woff2'),
-  url('../fonts/Trade Gothic/Trade Gothic LT.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TradeGothicLT';
-  src: url('../fonts/Trade Gothic/TradeGothicLT.woff') format('woff'),
-  url('../fonts/Trade Gothic/TradeGothicLT.ttf') format('truetype'),
-  url('../fonts/Trade Gothic/TradeGothicLT.svg#TradeGothicLT') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-
-

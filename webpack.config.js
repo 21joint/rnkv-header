@@ -4,6 +4,8 @@ const args = require('yargs').argv;
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Autoprefixer = require('autoprefixer');
+const PostCssFlexbugs = require('postcss-flexbugs-fixes');
 const Pkg = require('./package');
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
 
@@ -60,8 +62,8 @@ module.exports = {
               options: {
                 sourceMap: IS_DEV,
                 plugins: [
-                  require('postcss-flexbugs-fixes'),
-                  require('autoprefixer')({
+                  PostCssFlexbugs,
+                  Autoprefixer({
                     browsers: ['last 3 versions'],
                   }),
                 ],
@@ -113,6 +115,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      meta: {
+        charset: 'utf-8',
+        viewport: 'content=width=device-width, initial-scale=1, shrink-to-fit=no',
+      },
     }),
     new ExtractTextPlugin({
       filename: 'styles/[name].css',

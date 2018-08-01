@@ -5,6 +5,7 @@
   ],
   "parserOptions": {
     "ecmaVersion": 7,
+    "no-console": false,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
@@ -13,6 +14,7 @@
   },
   "parser": "babel-eslint",
   "env": {
+    "node": true,
     "browser": true,
     "es6": true
   },
