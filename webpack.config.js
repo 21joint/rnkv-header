@@ -1,10 +1,10 @@
 const path = require('path');
-const Pkg = require('./package');
 const args = require('yargs').argv;
-const glob = require('glob');
+// const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Pkg = require('./package');
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -15,24 +15,30 @@ const IS_DEV = (process.env.NODE_ENV === 'dev');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts/[name].[hash].js',
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
       // JS
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
         test: /\.js$/,
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, 'src'),
         ],
         use: [
-          'babel-loader'
-        ]
+          'babel-loader',
+        ],
       },
 
       // SCSS
@@ -46,8 +52,8 @@ module.exports = {
               options: {
                 minimize: !IS_DEV,
                 sourceMap: IS_DEV,
-                publicPath: '../'
-              }
+                publicPath: '../',
+              },
             },
             {
               loader: 'postcss-loader',
@@ -56,20 +62,20 @@ module.exports = {
                 plugins: [
                   require('postcss-flexbugs-fixes'),
                   require('autoprefixer')({
-                    browsers: ['last 3 versions']
-                  })
-                ]
-              }
+                    browsers: ['last 3 versions'],
+                  }),
+                ],
+              },
             },
             {
               loader: 'sass-loader',
               options: {
                 sourceMap: IS_DEV,
-                data: "$prefix: " + require('./conf').prefix + ";"
-              }
-            }
-          ]
-        })
+                data: `$prefix: ${require('./conf').prefix};`,
+              },
+            },
+          ],
+        }),
       },
 
       // FONTS/IMAGES
@@ -84,33 +90,32 @@ module.exports = {
                 if (file.indexOf('fonts') > -1) {
                   return 'fonts/[name].[ext]';
                 }
-                else {
-                  return 'images/[name].[ext]';
-                }
+
+                return 'images/[name].[ext]';
               },
               fallback: 'file-loader',
               outputPath: './',
-              publicPath: args.git ? '/' + Pkg.name +'/' : '/'
-            }
-          }
-        ]
-      }
-    ]
+              publicPath: args.git ? `/${Pkg.name}/` : '/',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
-      IS_DEV
+      IS_DEV,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
     new ExtractTextPlugin({
-      filename: 'styles/[name].css'
-    })
-  ]
+      filename: 'styles/[name].css',
+    }),
+  ],
 };

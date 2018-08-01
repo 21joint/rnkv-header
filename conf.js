@@ -13,6 +13,6 @@ module.exports = {
     images: 'src/assets/images',
     icons: 'src/assets/icomoon/fonts',
     dist: 'dist',
-    publicPath: '/'
-  }
+    publicPath: '/',
+  },
 };
