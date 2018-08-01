@@ -1,26 +1,16 @@
 import $ from 'jquery';
-
-function getWeather(options) {
-  const queryUri = `https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where u='${options.unit
-    ? options.unit
-    : 'c'}' AND woeid in (SELECT woeid FROM geo.places WHERE text="(${options.lat},${options.lnt})")&format=json`;
-
-  return $.ajax(queryUri).then((res) => {
-    if (res.status >= 400) {
-      throw new Error('Bad response from server');
-    }
-    return res.query.results
-      ? res.query.results.channel.item.condition
-      : { code: 'NA', temp: 'NA' };
-  });
-}
+import { prefix } from '../../../conf';
+import './header.scss';
+import 'bootstrap-sass';
+import getWeather from '../weather/weather';
 
 $(document).ready(() => {
-  getWeather({
-    lat: 37.27897,
-    lnt: -79.93594,
+  $(`${prefix}-weather`).append(getWeather({
+    lat: 40.7762691,
+    lnt: -112.2006695,
     unit: 'f',
   }).then((res) => {
     console.log(res);
-  });
+    $(`.${prefix}-btn--weather`).append($(`<div class="${prefix}-weather"><i class="climacon i${res.code}"></i><span class="${prefix}-weather--temp"><b>${res.temp}</b><sup>°</sup></span></div>`));
+  }));
 });

@@ -8,12 +8,12 @@ module.exports = merge(webpackConfig, {
     port: 2121,
     hot: true,
     open: true,
-    publicPath: '/'
+    inline: true,
+    publicPath: '/',
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
 
 });

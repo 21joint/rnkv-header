@@ -8,6 +8,7 @@ const Autoprefixer = require('autoprefixer');
 const PostCssFlexbugs = require('postcss-flexbugs-fixes');
 const Pkg = require('./package');
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CONF = require('./conf');
 
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
@@ -42,10 +43,34 @@ module.exports = {
           'babel-loader',
         ],
       },
+      {
+        test: /\.css$/,
+        loader: ['webpack-extract-css-hot-reload'].concat(ExtractTextPlugin.extract([
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: !IS_DEV,
+              sourceMap: IS_DEV,
+              publicPath: '../',
+            },
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: IS_DEV,
+              plugins: [
+                PostCssFlexbugs,
+                Autoprefixer({
+                  browsers: ['last 3 versions'],
+                }),
+              ],
+            },
+          },
+        ])),
+      },
 
       // SCSS
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -73,7 +98,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 sourceMap: IS_DEV,
-                data: `$prefix: ${require('./conf').prefix};`,
+                data: `$prefix: ${CONF.prefix};`,
               },
             },
           ],
@@ -106,7 +131,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      IS_DEV,
+      CONF: JSON.stringify(CONF),
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -116,8 +141,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       meta: {
-        charset: 'utf-8',
-        viewport: 'content=width=device-width, initial-scale=1, shrink-to-fit=no',
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       },
     }),
     new ExtractTextPlugin({
