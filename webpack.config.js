@@ -107,12 +107,12 @@ module.exports = {
 
       // FONTS/IMAGES
       {
-        test: /\.(woff|woff2|ttf|eot|otf|svg|gif|png|jpe?g)$/i,
+        test: /\.(woff|woff2|ttf|eot|otf|svg|gif|png|jpeg|jpg)$/i,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
+              limit: 50000,
               name(file) {
                 if (file.indexOf('fonts') > -1) {
                   return 'fonts/[name].[ext]';
