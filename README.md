@@ -1,5 +1,5 @@
 <div align="center">
- <p>made by</p><a href="http://www.21joint.com"><img width="150" height="auto" src="https://www.dropbox.com/s/xjav7elgoaw3phi/Logo%20Official.svg?dl=0&raw=1"></a>
+ <p>made by</p><a href="http://www.21joint.com"><img width="150" height="auto" src="https://www.dropbox.com/s/daf202qyo6wwvqe/21logo_off.svg?dl=0&raw=1"></a>
 </div>
 
 # rnkv-header
