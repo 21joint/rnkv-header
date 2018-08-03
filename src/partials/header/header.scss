@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
   font-stretch: normal;
-  .container-fluid {
+  > .container-fluid {
     max-width: 1110px;
     padding-left: 15px;
     padding-right: 15px;
@@ -217,7 +217,7 @@
     width: auto;
     max-height: 42px;
     @media (min-width: 992px) {
-      max-height: 60px;
+      max-height: 56px;
     }
     @media (min-width: 1200px) {
       max-height: 75px;
