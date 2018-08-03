@@ -2,12 +2,9 @@
 <head>
     <title><%= CONF.description %></title>
 </head>
-<body>
+<body class="<%= IS_DEV ? 'bg-primary' : '' %>">
 <div class="main-wrapper">
     <%= require('html-loader?interpolate!./partials/header/header.html') %>
-    <div class="oyoyo h-100">
-
-    </div>
 </div>
 </body>
 </html>

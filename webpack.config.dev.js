@@ -12,7 +12,7 @@ module.exports = merge(webpackConfig, {
     publicPath: '/',
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devtool: 'inline-source-map',
 

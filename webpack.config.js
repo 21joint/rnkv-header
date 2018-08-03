@@ -57,6 +57,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: IS_DEV,
+              publicPath: '../',
               plugins: [
                 PostCssFlexbugs,
                 Autoprefixer({
@@ -131,6 +132,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
+      IS_DEV,
       CONF: JSON.stringify(CONF),
     }),
     new webpack.ProvidePlugin({
@@ -142,6 +144,7 @@ module.exports = {
       template: './src/index.html',
       meta: {
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        charset: 'UTF-8',
       },
     }),
     new ExtractTextPlugin({

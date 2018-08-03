@@ -1,4 +1,5 @@
 @import "../../assets/styles/variables";
+
 .#{$prefix}-header {
   font-size: 15px;
   position: relative;
@@ -11,15 +12,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
+  font-stretch: normal;
   .main-links {
     display: block;
   }
   > .container-fluid {
-    max-width: 1060px;
-    @media (max-width: 991px) {
-      padding: 0 15px;
-
-    }
+    max-width: 1110px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   li {
     @media(min-width: 992px) {
@@ -137,7 +137,7 @@
       font-size: 19px;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      padding: 5px 13px;
+      padding: 10px 13px;
       &:hover {
         background-color: #69923a;
       }
@@ -174,19 +174,29 @@
   }
 }
 
+.#{$prefix}-main--navBot {
+  line-height: 1;
+}
+
+.#{$prefix}-btn--mobile {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to bottom, #005073 0%,#003657 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-stretch: condensed;
+}
 .navbar-toggler {
   cursor: pointer;
   width: 60px;
   height: 60px;
   border: none;
-  background-color: #004365;
+  background: linear-gradient(to bottom, #005073 0%,#003657 100%);
   z-index: 100;
   outline: none;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 14px;
   padding: 9px;
@@ -212,18 +222,15 @@
 }
 
 .#{$prefix}-logo {
-
   img {
-    width: 160px;
+    height: 100%;
+    width: auto;
+    max-height: 42px;
     @media (min-width: 992px) {
-      width: 280px;
+      max-height: 75px;
     }
   }
 
-}
-
-.oyoyo {
-  background-color: #000;
 }
 
 .#{$prefix}-header--right {
@@ -272,11 +279,7 @@
 
 .#{$prefix}-btn--search {
   cursor: pointer;
-  width: 60px;
-  height: 60px;
-  font-size: 14px;
   border: none;
-  background-color: #004365;
   z-index: 100;
   outline: none;
   -ms-flex-direction: column;
@@ -372,6 +375,21 @@
     background-repeat: no-repeat;
     background-size: 18px;
     border: none;
+  }
+}
+
+.#{$prefix}-weather {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  .climacon {
+    font-size: 20px;
+    margin-right: 10px;
   }
 }
 

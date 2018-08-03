@@ -10,7 +10,7 @@ $(document).ready(() => {
     lnt: -112.2006695,
     unit: 'f',
   }).then((res) => {
-    console.log(res);
-    $(`.${prefix}-btn--weather`).append($(`<div class="${prefix}-weather"><i class="climacon i${res.code}"></i><span class="${prefix}-weather--temp"><b>${res.temp}</b><sup>°</sup></span></div>`));
+    // console.log(res);
+    $(`.${prefix}-weather`).append($(`<i class="climacon i${res.code}"></i><span class="${prefix}-weather--temp"><b>${res.temp}</b><sup>°</sup></span>`));
   }));
 });

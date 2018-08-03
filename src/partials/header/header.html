@@ -26,32 +26,31 @@
                         </form>
                     </div>
                     <div class="flex-col-auto ml-auto px-0">
-                        <button class="${ CONF.prefix }-btn--search" type="button">
-                            <img class="img-responsive" src="../../assets/images/search-new.svg" alt="Search"><span>SEARCH</span>
+                        <button class="${ CONF.prefix }-btn--mobile ${ CONF.prefix }-btn--search" type="button">
+                            <img class="img-responsive" src="../../assets/images/search-new.svg" alt="Search"><span>Search</span>
                         </button>
                     </div>
                     <div class="flex-col-auto px-0">
                         <button type="button"
-                                class="navbar-toggler navbar_toggler hidden-md hidden-lg hidden-xl"
+                                class="navbar-toggler navbar_toggler ${ CONF.prefix }-btn--mobile hidden-md hidden-lg hidden-xl"
                                 data-toggle="collapse"
                                 data-target="#navBar"
                                 aria-expanded="false">
                             <i class="icon-hamburger"></i>
-                            <span>MENU</span>
+                            <span>Menu</span>
                         </button>
                     </div>
 
                 </div>
             </div>
             <div class="flex-col-12 flex-col-md position-static">
-                <div class="flex-row">
+                <div class="flex-row align-items-center">
                     <div class="flex-col position-static ml-auto">
-                        <div class="${ CONF.prefix }-header--right collapse navbar-collapse"
-                             id="navBar">
+                        <div class="${ CONF.prefix }-header--right collapse navbar-collapse" id="navBar">
                             <div class="flex-row">
-                                <div class="flex-col-md-auto order-2 order-md-1">
+                                <div class="flex-col-12 order-2 order-md-1">
                                     <nav class="${ CONF.prefix }-header--rightTop">
-                                        <div class="flex-row align-items-center">
+                                        <div class="flex-row">
                                             <div class="flex-col-md-auto">
                                                 <ul class="${ CONF.prefix }-main--navTop m-0">
                                                     <li><a href="${ CONF.BASE_URL }/meetings/"
@@ -72,7 +71,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="flex-col-auto hidden-xs hidden-sm px-0">
+                                            <div class="flex-col-auto align-self-center hidden-xs hidden-sm px-0">
                                                 <ul class="${ CONF.prefix }-header--social m-0 p-0">
                                                     <li><a href="https://www.facebook.com/visitvbr" target="_blank"><i
                                                             class="icon-facebook"></i></a></li>
@@ -93,15 +92,17 @@
                                                 </ul>
                                             </div>
                                             <div class="flex-col-auto">
+                                                <div class="${ CONF.prefix }-weather">
 
+                                                </div>
                                             </div>
                                         </div>
 
                                     </nav>
                                 </div>
-                                <div class="flex-col-md-auto order-1 order-md-2">
+                                <div class="flex-col-12 order-1 order-md-2">
                                     <nav class="${ CONF.prefix }-header--rightBot">
-                                        <div class="flex-row">
+                                        <div class="flex-row align-items-center">
                                             <div class="flex-col-md-auto">
                                                 <ul class="${ CONF.prefix }-main--navBot m-0 p-0">
                                                     <li>
@@ -153,11 +154,6 @@
                                                        </form>
                                                    </div>
                                                </div>
-                                            </div>
-                                            <div class="flex-col-auto">
-                                                <div class="${ CONF.prefix }-weather">
-
-                                                </div>
                                             </div>
                                         </div>
                                     </nav>
