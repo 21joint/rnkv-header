@@ -1,38 +1,39 @@
 <header class="${ CONF.prefix }-header">
     <div class="container-fluid">
-        <div class="flex-row align-items-center justify-content-between">
+        <div class="flex-row align-items-center">
             <div class="flex-col-12 flex-col-md-auto">
                 <div class="flex-row align-items-center">
                     <div class="flex-col-auto">
                         <a class="${ CONF.prefix }-logo"
                            href="${ CONF.BASE_URL }">
                             <img
-                                    class="img-responsive"
-                                    src="../../assets/images/logo.svg"
-                                    alt="${ CONF.name }">
+                                class="img-responsive"
+                                src="../../assets/images/logo.svg"
+                                alt="${ CONF.name }">
                         </a>
                     </div>
-                    <div class="${ CONF.prefix }-search--mobile flex-col visible-xs visible-sm">
-                        <form class="${ CONF.prefix }-search--form h-100 m-0"
-                              action="https://www.visitroanokeva.com/search/">
-                            <div class="form-group mb-0 w-100">
-                                <input type="search" autocomplete="off" autocorrect="off" autocapitalize="off"
-                                       class="form-control" placeholder="Search">
-                            </div>
-                            <div class="form-group">
-                                <button type="submit"
-                                        class="${ CONF.prefix }-search--mobilebtn"></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="flex-col-auto ml-auto px-0">
-                        <button class="${ CONF.prefix }-btn--mobile ${ CONF.prefix }-btn--search" type="button">
+                    <div class="dropdown position-static flex-col-auto ml-auto px-0 hidden-md hidden-lg hidden-xl">
+                        <button id="rnkvSearchMobile" class="${ CONF.prefix }-btn--mobile ${ CONF.prefix }-btn--search"
+                                type="button" data-toggle="dropdown" aria-haspopup="true">
                             <img class="img-responsive" src="../../assets/images/search-new.svg" alt="Search"><span>Search</span>
                         </button>
+                        <div class="dropdown-menu dropdown-menu-right ${ CONF.prefix }-dropdown--menu---searchmobile"
+                             aria-labelledby="rnkvSearchMobile">
+                            <form class="${ CONF.prefix }-search--form h-100 m-0"
+                                  action="https://www.visitroanokeva.com/search/">
+                                <div class="form-group">
+                                    <button type="submit"
+                                            class="${ CONF.prefix }-search--action"></button>
+                                    <input type="search" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                           class="form-control" placeholder="Search">
+                                    <button type="button" class="btn btn-close" data-dismiss="dropdown">x</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="flex-col-auto px-0">
+                    <div class="flex-col-auto px-0 hidden-md hidden-lg hidden-xl">
                         <button type="button"
-                                class="navbar-toggler navbar_toggler ${ CONF.prefix }-btn--mobile hidden-md hidden-lg hidden-xl"
+                                class="${ CONF.prefix }-btn--mobile navbar-toggler navbar_toggler"
                                 data-toggle="collapse"
                                 data-target="#navBar"
                                 aria-expanded="false">
@@ -44,122 +45,118 @@
                 </div>
             </div>
             <div class="flex-col-12 flex-col-md position-static">
-                <div class="flex-row align-items-center">
-                    <div class="flex-col position-static ml-auto">
-                        <div class="${ CONF.prefix }-header--right collapse navbar-collapse" id="navBar">
+                <div class="collapse navbar-collapse ${ CONF.prefix }-header--right" id="navBar">
+                    <div class="flex-col-12 flex-col-md-auto ml-auto order-2 order-md-1">
+                        <nav class="${ CONF.prefix }-header--rightTop">
                             <div class="flex-row">
-                                <div class="flex-col-12 order-2 order-md-1">
-                                    <nav class="${ CONF.prefix }-header--rightTop">
-                                        <div class="flex-row">
-                                            <div class="flex-col-md-auto">
-                                                <ul class="${ CONF.prefix }-main--navTop m-0">
-                                                    <li><a href="${ CONF.BASE_URL }/meetings/"
-                                                           target="_blank">Meetings</a>
-                                                    </li>
-                                                    <li><a href="${ CONF.BASE_URL }/sports/"
-                                                           target="_blank">Sports</a></li>
-                                                    <li><a href="${ CONF.BASE_URL }/group-tours/"
-                                                           target="_blank">Groups</a>
-                                                    </li>
-                                                    <li><a href="${ CONF.BASE_URL }/weddings/"
-                                                           target="_blank">Weddings</a>
-                                                    </li>
-                                                    <li><a href="${ CONF.BASE_URL }/media/"
-                                                           target="_blank">Media</a></li>
-                                                    <li><a href="${ CONF.BASE_URL }/blog/"
-                                                           target="_blank">Blog</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="flex-col-auto align-self-center hidden-xs hidden-sm px-0">
-                                                <ul class="${ CONF.prefix }-header--social m-0 p-0">
-                                                    <li><a href="https://www.facebook.com/visitvbr" target="_blank"><i
-                                                            class="icon-facebook"></i></a></li>
-                                                    <li>
-                                                        <a href="https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=visitvbr"
-                                                           target="_blank"><i class="icon-twitter"></i></a></li>
-                                                    <li>
-                                                        <a href="https://www.linkedin.com/company/roanoke-valley-convention-and-visitors-bureau"
-                                                           target="_blank"><i class="icon-linkedin"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/vablueridge/"
-                                                           target="_blank"><i
-                                                            class="icon-pinterest"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/visitvbr/" target="_blank"><i
-                                                            class="icon-instagram"></i></a></li>
-                                                    <li>
-                                                        <a href="https://www.youtube.com/channel/UCFU_Du1m5pDhAsu65POaKbw"
-                                                           target="_blank"><i class="icon-youtube"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="flex-col-auto">
-                                                <div class="${ CONF.prefix }-weather">
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </nav>
+                                <div class="flex-col-md-auto">
+                                    <ul class="${ CONF.prefix }-main--navTop m-0">
+                                        <li><a href="${ CONF.BASE_URL }/meetings/"
+                                               target="_blank">Meetings</a>
+                                        </li>
+                                        <li><a href="${ CONF.BASE_URL }/sports/"
+                                               target="_blank">Sports</a></li>
+                                        <li><a href="${ CONF.BASE_URL }/group-tours/"
+                                               target="_blank">Groups</a>
+                                        </li>
+                                        <li><a href="${ CONF.BASE_URL }/weddings/"
+                                               target="_blank">Weddings</a>
+                                        </li>
+                                        <li><a href="${ CONF.BASE_URL }/media/"
+                                               target="_blank">Media</a></li>
+                                        <li><a href="${ CONF.BASE_URL }/blog/"
+                                               target="_blank">Blog</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="flex-col-12 order-1 order-md-2">
-                                    <nav class="${ CONF.prefix }-header--rightBot">
-                                        <div class="flex-row align-items-center">
-                                            <div class="flex-col-md-auto">
-                                                <ul class="${ CONF.prefix }-main--navBot m-0 p-0">
-                                                    <li>
-                                                        <a class="main-links"
-                                                           href="${ CONF.BASE_URL }/things-to-do/"
-                                                           target="_blank"
-                                                           title="Explore">Things To Do</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="main-links"
-                                                           href="${ CONF.BASE_URL }/hotels-lodging/"
-                                                           target="_blank"
-                                                           title="Play">Hotels/lodging</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="main-links"
-                                                           href="${ CONF.BASE_URL }/restaurants/"
-                                                           target="_blank"
-                                                           title="Eat">Restaurants</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="main-links"
-                                                           href="${ CONF.BASE_URL }/region/"
-                                                           target="_blank"
-                                                           title="Stay">Region</a>
-                                                    </li>
-                                                    <li>
-                                                        <a id="last-item-main-links"
-                                                           class="main-links"
-                                                           href="${ CONF.BASE_URL }/plan/"
-                                                           target="_blank"
-                                                           title="Deals">plan</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="flex-col-12 flex-col-md-auto hidden-xs hidden-sm">
-                                               <div class="dropdown">
-                                                   <a class="${ CONF.prefix }-toggle--search" id="rnkvSearchCollapse" href="#" role="button" data-toggle="dropdown"  aria-haspopup="true">Search</a>
-                                                   <div class="dropdown-menu dropdown-menu-left ${ CONF.prefix }-search-dropdown--menu p-0" aria-labelledby="rnkvSearchCollapse">
-                                                       <form class="form-inline m-0"
-                                                             action="https://www.visitroanokeva.com/search/">
-                                                           <div class="form-group mb-0">
-                                                               <input class="form-control" name="q" type="search"
-                                                                      placeholder="Search" id="txtSearch">
-                                                               <button type="submit" id="btnSrcSubmit">
-                                                                   <i class="fa fa-search"></i>
-                                                               </button>
-                                                           </div>
-                                                       </form>
-                                                   </div>
-                                               </div>
-                                            </div>
-                                        </div>
-                                    </nav>
+                                <div class="flex-col-auto align-self-center hidden-xs hidden-sm px-0">
+                                    <ul class="${ CONF.prefix }-header--social m-0 p-0">
+                                        <li><a href="https://www.facebook.com/visitvbr" target="_blank"><i
+                                            class="icon-facebook"></i></a></li>
+                                        <li>
+                                            <a href="https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=visitvbr"
+                                               target="_blank"><i class="icon-twitter"></i></a></li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/roanoke-valley-convention-and-visitors-bureau"
+                                               target="_blank"><i class="icon-linkedin"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/vablueridge/"
+                                               target="_blank"><i
+                                            class="icon-pinterest"></i></a></li>
+                                        <li><a href="https://www.instagram.com/visitvbr/" target="_blank"><i
+                                            class="icon-instagram"></i></a></li>
+                                        <li>
+                                            <a href="https://www.youtube.com/channel/UCFU_Du1m5pDhAsu65POaKbw"
+                                               target="_blank"><i class="icon-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col-md-auto hidden-xs hidden-sm">
+                                    <div class="${ CONF.prefix }-weather">
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                        </nav>
+                    </div>
+                    <div class="flex-col-12 flex-col-md-auto ml-auto order-1 order-md-2">
+                        <nav class="${ CONF.prefix }-header--rightBot">
+                            <div class="flex-row align-items-center">
+                                <div class="flex-col-md-auto">
+                                    <ul class="${ CONF.prefix }-main--navBot m-0 p-0">
+                                        <li>
+                                            <a class="main-links"
+                                               href="${ CONF.BASE_URL }/things-to-do/"
+                                               target="_blank"
+                                               title="Explore">Things To Do</a>
+                                        </li>
+                                        <li>
+                                            <a class="main-links"
+                                               href="${ CONF.BASE_URL }/hotels-lodging/"
+                                               target="_blank"
+                                               title="Play">Hotels/lodging</a>
+                                        </li>
+                                        <li>
+                                            <a class="main-links"
+                                               href="${ CONF.BASE_URL }/restaurants/"
+                                               target="_blank"
+                                               title="Eat">Restaurants</a>
+                                        </li>
+                                        <li>
+                                            <a class="main-links"
+                                               href="${ CONF.BASE_URL }/region/"
+                                               target="_blank"
+                                               title="Stay">Region</a>
+                                        </li>
+                                        <li>
+                                            <a id="last-item-main-links"
+                                               class="main-links"
+                                               href="${ CONF.BASE_URL }/plan/"
+                                               target="_blank"
+                                               title="Deals">Plan</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex-col-12 flex-col-md-auto hidden-xs hidden-sm">
+                                    <div class="dropdown">
+                                        <a class="${ CONF.prefix }-toggle--search" id="rnkvSearchCollapse" href="#"
+                                           role="button" data-toggle="dropdown" aria-haspopup="true">Search</a>
+                                        <div class="dropdown-menu dropdown-menu-left ${ CONF.prefix }-search-dropdown--menu p-0"
+                                            aria-labelledby="rnkvSearchCollapse">
+                                            <form class="${ CONF.prefix }-search--form m-0"
+                                                  action="https://www.visitroanokeva.com/search/">
+                                                <div class="form-group position-relative m-0">
+                                                    <button type="submit"
+                                                            class="${ CONF.prefix }-search--action"></button>
+                                                    <input type="search" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                                           class="form-control" placeholder="Search">
+                                                    <button type="button" class="btn btn-close" data-dismiss="dropdown">x</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>

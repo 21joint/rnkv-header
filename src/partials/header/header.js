@@ -13,4 +13,8 @@ $(document).ready(() => {
     // console.log(res);
     $(`.${prefix}-weather`).append($(`<i class="climacon i${res.code}"></i><span class="${prefix}-weather--temp"><b>${res.temp}</b><sup>°</sup></span>`));
   }));
+
+  $('[data-dismiss=dropdown]').on('click', function () {
+    $(this).closest('.dropdown').find('[data-toggle]').dropdown('toggle');
+  });
 });
