@@ -94,6 +94,7 @@
   //li:hover{
   //  background-color: #336e88;
   //}
+  margin: 0 -15px;
   a {
     display: block;
     font-size: 15px;
@@ -117,6 +118,7 @@
 }
 
 .#{$prefix}-header--rightBot {
+  margin: 0 -15px;
   .main-links {
     font-size: 20px;
     padding: 8px 15px;
@@ -349,21 +351,22 @@
   top: 50%;
   margin: 0;
   transform: translate(0, -50%);
+}
 
-  .#{$prefix}-search--action {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    background-image: url('../../assets/images/search.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 18px;
-    border: none;
-  }
+.#{$prefix}-search--action {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/images/search.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border: none;
+  z-index: 1;
 }
 
 .#{$prefix}-weather {
