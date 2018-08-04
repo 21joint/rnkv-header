@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'weather-icons/css/weather-icons.min.css';
 import { prefix } from '../../../conf';
 import './header.scss';
 import 'bootstrap-sass';
